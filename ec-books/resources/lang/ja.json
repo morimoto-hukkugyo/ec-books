@@ -1,0 +1,21 @@
+{
+    "Hello!": "こんにちは",
+    "Whoops!": "おっと！",
+    "Regards": "どうぞよろしくお願いします",
+    "Reset Password Notification": "パスワード再設定のお知らせ",
+    "Reset Password": "パスワードをリセット",
+    "You are receiving this email because we received a password reset request for your account.": "あなたのアカウントからパスワード再設定のリクエストがありました。",
+    "This password reset link will expire in :count minutes.": "このパスワードリセットリンクの有効期限は :count 分です。",
+    "If you did not request a password reset, no further action is required.": "もしこのメールにお心当たりがない場合は、このまま放置していただいて大丈夫です。",
+    "If you’re having trouble clicking the button above, copy and paste the URL below.":"ボタンがクリックできない場合は、下のURLをコピーしてブラウザのアドレス欄に貼り付け、直接アクセスしてください。",
+    "into your web browser: ":"ブラウザでアクセス：",
+    "E-Mail Address": "メールアドレス",
+    "Password": "パスワード",
+    "Login": "ログイン",
+    "Logout": "ログアウト",
+    "Remember Me": "パスワードを保存",
+    "Forgot Your Password?": "パスワードをお忘れた方はこちら",
+    "Confirm Password": "パスワード(確認用)",
+    "Send Password Reset Link":  "パスワード再設定URLを送信",
+    "Register": "新規登録"
+}
