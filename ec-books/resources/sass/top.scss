@@ -1,0 +1,39 @@
+.topics {
+    margin: 0;
+    overflow: hidden;
+    clear: both;
+    padding-top: 30px;
+}
+
+.event_frame {
+    width: margin 0 auto 0 auto;
+    display: block;
+}
+
+.event_box_l {
+    width: 215px;
+    float: left;
+    margin: 0 15px 18px 0;
+}
+
+a.event_box_link, a:hover.event_box_link {
+    text-decoration: none;
+}
+
+.event_box {
+    padding: 8px 6px 8px 6px;
+    background: #efedee;
+}
+
+.event_box .txt_sub {
+    font-size: 11px;
+    height: 36px;
+    line-height: 120%;
+}
+
+.event_box .txt_main {
+    font-size: 14px;
+    font-weight: bold;
+    height: 65px;
+    line-height: 140%;
+}
