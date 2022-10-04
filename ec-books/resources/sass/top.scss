@@ -37,3 +37,74 @@ a.event_box_link, a:hover.event_box_link {
     height: 65px;
     line-height: 140%;
 }
+
+.event_box_r {
+    width: 215px;
+    float: right;
+    margin: 0 0 18px 0;
+}
+
+.clear {
+    clear: both;
+}
+
+
+#main_contents .book_list {
+    clear: both;
+    margin: 0 0 15px 0;
+}
+
+#main_contents h3 {
+    background-image: url(/public/img/title_border.jpg);
+    background-repeat: no-repeat;
+    background-position: bottom;
+    padding-bottom: 6px;
+    margin-top: 0px;
+    font-size: 16px;
+    clear: both;
+}
+
+.book_list ul {
+    background-image: url(/images/osusume10bg.gif);
+    background-repeat: no-repeat;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    float: left;
+}
+
+.book_list ul li {
+    width: 110px;
+    float: left;
+    margin: 5px 13px 5px 12px;
+}
+
+
+#main_contents .book_list ul li img {
+    height: 154px;
+}
+
+.book_list .books_title {
+    font-size: 13px;
+    line-height: 16px;
+    margin: 5px 0 0 0;
+    font-weight: bold;
+    height: 40px;
+}
+
+.book_list .books_writer {
+    font-size: 12px;
+    line-height: 16px;
+}
+
+.book_list .books_price, .book_list .books_ather {
+    font-size: 11px;
+    line-height: 14px;
+    margin: 2px 0 0 0;
+}
+
+#main_contents .book_list ul li span {
+    display: block;
+    text-align: center;
+}
