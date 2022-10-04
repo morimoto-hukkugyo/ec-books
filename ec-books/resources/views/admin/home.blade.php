@@ -23,7 +23,7 @@
                         <img src="" alt="" class="">
                     </div>
                     <ul class="c-menu">
-                        <li class="c-menu__item u-bgColor__add">商品追加</li>
+                        <li class="c-menu__item u-bgColor__add"><a href="{{ route('product.new') }}">商品追加</a></li>
                         <li class="c-menu__item u-bgColor__edit">編集</li>
                         <li class="c-menu__item u-bgColor__remove">削除</li>
                     </ul>
