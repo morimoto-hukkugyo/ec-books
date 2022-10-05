@@ -1,10 +1,10 @@
 @extends('layouts.app_admin')
 
 @section('content')
-<form action="{{ route('product.new') }}" class="c-form" method="post">
+<form action="{{ route('product.new') }}" class="c-form" method="post" enctype="multipart/form-data">
     @csrf
 
-    <label for="name" class="c-form__label" enctype="multipart/form-data">
+    <label for="name" class="c-form__label">
         タイトル
         <input id="" name="name" type="text" maxlength="100" class="c-input js-count-title-input @error('title') error @enderror" value="" 
         required autocomplete="title" autofocus placeholder="本のタイトル" >
@@ -33,7 +33,7 @@
     </label>
     <label for="introduction" class="c-form__label">
         紹介
-        <textarea name="intoduction" id="" cols="30" rows="10"></textarea>
+        <textarea name="introduction" id="" cols="30" rows="10"></textarea>
     </label>
     <label for="category_id" class="c-form__label">
         価格

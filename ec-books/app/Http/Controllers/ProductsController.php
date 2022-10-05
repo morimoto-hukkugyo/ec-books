@@ -16,8 +16,19 @@ class ProductsController extends Controller
     // 商品作成
     public function create(Request $request)
     {
+        Log::debug($request);
         $product = new Product;
-        $product->fill($request->all())->save();
+        $image = $request->image;
+        $image_path = (!empty($image)) ? $image->store('public/uploads') : '';
+
+        $product->category_id = $request['category_id'];
+        $product->name = $request['name'];
+        $product->image = $image_path;
+        $product->introduction = $request['introduction'];
+        $product->price = $request['price'];
+        $product->writer_name = $request['writer_name'];
+        $product->writer_intro = $request['writer_intro'];
+        $product->save();
 
         return redirect()->route('admin.home');
     }

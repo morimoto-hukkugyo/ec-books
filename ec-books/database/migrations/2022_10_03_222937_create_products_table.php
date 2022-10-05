@@ -17,7 +17,7 @@ class CreateProductsTable extends Migration
             $table->increments('id');
             $table->unsignedBigInteger('category_id')->default(0);
             $table->string('name', 100)->nullable();
-            $table->string('image', 4)->nullable();
+            $table->string('image')->nullable();
             $table->string('introduction', 1000)->default('商品の説明はありません。');
             $table->integer('price');
             $table->string('writer_name', 30);
