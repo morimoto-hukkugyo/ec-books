@@ -145,9 +145,18 @@
                     <ul>
                         <li class="first_child">
                             <a href="https://www.amazon.co.jp/%E3%81%8B%E3%81%8C%E3%81%BF%E3%81%AE%E5%AD%A4%E5%9F%8E-%E8%BE%BB%E6%9D%91-%E6%B7%B1%E6%9C%88/dp/4591153320" target="_blank">
-                                <img src="{{ asset('img/かがみの弧城.jpg') }}" height="140" width="215">
-                                <span class="books_title">かがみの弧城</span><br>
-                                <span class="books_writer">辻村　深月</span><br>
+                                <img src="{{ asset('img/かがみの弧城.jpg') }}">
+                                <span class="books_title">かがみの弧城</span>
+                                <span class="books_writer">辻村　深月</span>
+                                <span class="books_price">税込価格 1980円</span>
+                                <span class="books_ather"></span>
+                            </a>
+                        </li>
+                        <li class="first_child">
+                            <a href="https://www.amazon.co.jp/%E3%81%8B%E3%81%8C%E3%81%BF%E3%81%AE%E5%AD%A4%E5%9F%8E-%E8%BE%BB%E6%9D%91-%E6%B7%B1%E6%9C%88/dp/4591153320" target="_blank">
+                                <img src="{{ asset('img/夜行.jpg') }}">
+                                <span class="books_title">かがみの弧城</span>
+                                <span class="books_writer">辻村　深月</span>
                                 <span class="books_price">税込価格 1980円</span>
                                 <span class="books_ather"></span>
                             </a>

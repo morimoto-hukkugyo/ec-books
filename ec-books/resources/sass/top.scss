@@ -49,12 +49,12 @@ a.event_box_link, a:hover.event_box_link {
 }
 
 
-#main_contents .book_list {
+.book_list {
     clear: both;
     margin: 0 0 15px 0;
 }
 
-#main_contents h3 {
+h3 {
     background-image: url(/public/img/title_border.jpg);
     background-repeat: no-repeat;
     background-position: bottom;
@@ -81,7 +81,7 @@ a.event_box_link, a:hover.event_box_link {
 }
 
 
-#main_contents .book_list ul li img {
+.book_list ul li img {
     height: 154px;
 }
 
@@ -104,7 +104,7 @@ a.event_box_link, a:hover.event_box_link {
     margin: 2px 0 0 0;
 }
 
-#main_contents .book_list ul li span {
+.book_list ul li span {
     display: block;
     text-align: center;
 }
