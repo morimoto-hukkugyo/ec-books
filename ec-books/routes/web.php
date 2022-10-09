@@ -21,15 +21,16 @@ Auth::routes();
 | 1) User 認証不要
 |--------------------------------------------------------------------------
 */
-Route::get('/', [App\Http\Controllers\User\HomeController::class, 'top'])->name('top');
+// Route::get('/', [App\Http\Controllers\User\HomeController::class, 'top'])->name('top');
+Route::get('/', 'User\HomeController@top')->name('top');
 
 /*
 |--------------------------------------------------------------------------
 | 2) User ログイン後
 |--------------------------------------------------------------------------
 */
-Route::group(['middleware' => 'auth:user'], function() {
-    // Route::get('/home', 'HomeController@index')->name('home');
+Route::group(['middleware' => ['auth']], function() {
+    Route::get('show{id}', 'User\HomeController@show')->name('user.show');
     Route::get('home', [App\Http\Controllers\User\HomeController::class, 'home'])->name('home');
 });
  
