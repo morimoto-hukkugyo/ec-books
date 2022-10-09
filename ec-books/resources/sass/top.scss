@@ -16,6 +16,10 @@
     margin: 0 15px 18px 0;
 }
 
+.event_box_l:last-child {
+    margin: 0px
+}
+
 a.event_box_link, a:hover.event_box_link {
     text-decoration: none;
 }
@@ -107,4 +111,20 @@ h3 {
 .book_list ul li span {
     display: block;
     text-align: center;
+}
+
+.book-title {
+    color: #323276;
+    float: left;
+    font-size: 22px;
+    font-size: 2.2rem;
+    font-weight: bold;
+    line-height: 1.5;
+}
+
+
+.book-title-block {
+    float: left;
+    width: 100%;
+    margin: 0 -300px 0 0;
 }
