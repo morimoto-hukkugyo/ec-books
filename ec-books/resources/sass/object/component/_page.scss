@@ -1,0 +1,12 @@
+.c-page {
+    display: flex;
+    &__item {
+        padding: 5px 10px;
+        text-align: center;
+        line-height: 30px;
+        color: $color_base;
+        background: $color_main;
+        margin: 0 10px;
+        cursor: pointer;
+    }
+}

@@ -1,0 +1,11 @@
+.c-menu {
+    display: flex;
+    align-items: flex-end;
+    &__item {
+        max-height: 50px;
+        color: $color_base;
+        margin-right: $space_m;
+        padding: $space_s $space_m;
+        border-radius: 5px;
+    }
+}

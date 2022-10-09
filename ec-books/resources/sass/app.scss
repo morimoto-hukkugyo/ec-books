@@ -13,3 +13,44 @@
 //top
 @import './top.scss';
 
+// *************************************************************
+// Foundation
+// *************************************************************
+@import './foundation/mixin';
+@import './foundation/variables';
+@import './foundation/reset';
+@import './foundation/base';
+
+// *************************************************************
+// Layout
+// *************************************************************
+@import './layout/adminHome';
+@import './layout/header';
+#l-adminForm {
+    width: 700px;
+    margin: 0 auto;
+}
+
+// *************************************************************
+// Componet
+// *************************************************************
+@import './object/component/container';
+@import './object/component/menu';
+@import './object/component/menuTrigger';
+@import './object/component/sidebar';
+@import './object/component/form';
+@import './object/component/page';
+
+// *************************************************************
+// Project
+// *************************************************************
+@import './object/project/mainHeader';
+@import './object/project/adminHome';
+@import './object/project/productList';
+@import './object/project/footer';
+
+// *************************************************************
+// Utility
+// *************************************************************
+@import './object/utility/bgColor';
+

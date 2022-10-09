@@ -1,0 +1,28 @@
+.c-form {
+    &__label {
+        display: block;
+        width: 100%;
+    }
+    &__input {
+        display: block;
+        width: 100%;
+        padding: $space_s $space_m;
+        border: 2px solid $border-color;
+    }
+    &__checkbox {
+        display: flex;
+        align-items: center;
+        font-size: $font-size_xl;
+    }
+    &__textarea {
+        @extend .c-form__input;
+    }
+    &__submit {
+        display: block;
+        width: 100%;
+        color: $color_base;
+        background: $btn-color_main;
+        padding: $space_s $space_m;
+        text-align: center;
+    }
+}
