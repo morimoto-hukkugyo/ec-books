@@ -17,4 +17,11 @@ class HomeController extends Controller
         
         return view('welcome',compact('products','osususme'));
     }
+
+    public function show($id)
+    {
+        $product = Product::find($id);
+
+        return view('User.show',compact('product'));
+    }
 }
