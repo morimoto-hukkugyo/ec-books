@@ -15,4 +15,12 @@ class Product extends Model
         'writer_name',
         'writer_intro'
     ];
+    /**
+     * メソッド
+     */
+    // 商品一覧を取得
+    public static function getItemList()
+    {
+        return Product::paginate(10);
+    }
 }
