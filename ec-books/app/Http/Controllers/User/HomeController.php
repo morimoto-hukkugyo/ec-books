@@ -18,6 +18,13 @@ class HomeController extends Controller
         return view('welcome',compact('products','osususme'));
     }
 
+    public function index()
+    {
+        $products = Product::paginate(10);
+
+        return view('user.index',compact('products'));
+    }
+
     public function show($id)
     {
         $product = Product::find($id);

@@ -30,7 +30,9 @@ Route::get('/', 'User\HomeController@top')->name('top');
 |--------------------------------------------------------------------------
 */
 Route::group(['middleware' => ['auth']], function() {
+    Route::get('index', 'User\HomeController@index')->name('user.index');
     Route::get('show{id}', 'User\HomeController@show')->name('user.show');
+    Route::get('edit{id}', 'User\HomeController@edit')->name('user.edit');
     Route::get('home', [App\Http\Controllers\User\HomeController::class, 'home'])->name('home');
 });
  
