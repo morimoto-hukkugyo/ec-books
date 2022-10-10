@@ -1,6 +1,7 @@
 .c-sidebar {
     background: $color_base;
     padding: $space_l;
+    max-height: 300px;
     &__item {
         display: block;
         margin-bottom: $space_l;
