@@ -28,7 +28,15 @@
     &__item {
         padding: $space_m $space_l;
         display: flex;
+        align-items: center;
         border-bottom: 1px solid $border-color;
+    }
+    &__btn {
+        display: block;
+        color: $btn-color_main;
+        border: 2px solid $btn-color_main;
+        border-radius: 5px;
+        padding: $space_s $space_m;
     }
     &__page {
         margin-top: $space_3l;

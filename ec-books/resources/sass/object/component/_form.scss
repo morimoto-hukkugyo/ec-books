@@ -17,6 +17,11 @@
     &__textarea {
         @extend .c-form__input;
     }
+    &__image {
+        display: block;
+        width: 300px;
+        height: 200px;
+    }
     &__submit {
         display: block;
         width: 100%;
