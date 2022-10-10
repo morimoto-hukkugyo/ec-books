@@ -9278,14 +9278,15 @@ h3 {
   display: block;
 }
 
-.event_box_l {
-  width: 215px;
-  float: left;
-  margin: 0 15px 18px 0;
+.aaa {
+  display: flex;
+  flex-wrap: wrap;
 }
 
-.event_box_l:last-child {
-  margin: 0px;
+.event_box_l {
+  width: 215px;
+  display: block;
+  margin: 0 15px 18px 0;
 }
 
 a.event_box_link, a:hover.event_box_link {
@@ -9379,17 +9380,45 @@ h3 {
   text-align: center;
 }
 
-.book-title {
-  color: #323276;
-  float: left;
-  font-size: 22px;
-  font-size: 2.2rem;
-  font-weight: bold;
-  line-height: 1.5;
+.book_image {
+  padding-left: 20px;
 }
 
 .book-title-block {
   float: left;
   width: 100%;
   margin: 0 -300px 0 0;
+}
+
+.book-title {
+  color: #323276;
+  float: left;
+  font-size: 30px;
+  font-size: 2.2rem;
+  font-weight: bold;
+  line-height: 1.5;
+  width: 100%;
+}
+
+.writer_name {
+  font-size: 25px;
+  font-family: "Cherry Swash", cursive;
+  padding-top: 20px;
+}
+
+.writer_price {
+  font-family: "Itim", cursive;
+  font-size: 20px;
+  border-bottom: 1px solid #8c8b8b;
+  padding-bottom: 20px;
+}
+
+.book_introduction {
+  border-bottom: 1px solid #8c8b8b;
+  padding-top: 10px;
+  padding-bottom: 20px;
+}
+
+.book_writer_introduction {
+  padding-top: 10px;
 }
