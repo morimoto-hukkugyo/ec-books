@@ -25,41 +25,58 @@
                         <li class="c-menu__item u-bgColor__remove">削除</li>
                     </ul>
                 </div>
-                <ul class="p-productList__body">
-                    <li class="p-productList__colName">
-                        <p class="p-productList__col">
-                            商品ID
-                        </p>
-                        <p class="p-productList__col">
-                            商品名
-                        </p>
-                        <p class="p-productList__col">
-                            作家
-                        </p>
-                        <p class="p-productList__col">
-                            値段
-                        </p>
-                    </li>
-                    @foreach($products as $key => $val)
-                        <li class="p-productList__item">
+                <div class="p-productList__body">
+                    <ul class="p-productList__list">
+                        <li class="p-productList__colName">
                             <p class="p-productList__col">
-                                {{ $val->id }}
+                                商品ID
                             </p>
                             <p class="p-productList__col">
-                                {{ $val->name }}
+                                商品名
                             </p>
                             <p class="p-productList__col">
-                                {{ $val->writer_name }}
+                                作家
                             </p>
                             <p class="p-productList__col">
-                                {{ $val->price }}
+                                値段
                             </p>
-                            <a class="p-productList__btn" href="{{ route('product.edit', $val->id) }}">
-                                編集
-                            </a>
                         </li>
-                    @endforeach
-                </ul>
+                        @foreach($products as $key => $val)
+                            <li class="p-productList__item">
+                                <p class="p-productList__col">
+                                    {{ $val->id }}
+                                </p>
+                                <p class="p-productList__col">
+                                    {{ $val->name }}
+                                </p>
+                                <p class="p-productList__col">
+                                    {{ $val->writer_name }}
+                                </p>
+                                <p class="p-productList__col">
+                                    {{ $val->price }}
+                                </p>
+                                <a class="p-productList__btn u-btn__edit" href="{{ route('product.edit', $val->id) }}">
+                                    編集
+                                </a>
+                                {{-- <a class="p-productList__btn u-btn__remove" href="{{ route('product.edit', $val->id) }}" 
+                                    onclick="event.preventDefault();
+                                    document.getElementById('product-remove').submit();">
+                                    削除
+                                </a>
+                                <form id="product-remove" action="{{ route('product.edit', $val->id) }}" method="POST" style="display: none;">
+                                    @method('DELETE')
+                                    @csrf
+                                </form> --}}
+                                <form action="{{ route('product.delete',$val->id) }}" method="post">
+                                    @method('DELETE')
+                                    @csrf
+                                    <button class="p-productList__btn u-btn__remove" onclick='return confirm("商品ID{{ $val->id }}を削除しますか？");'>削除</button>
+                                </form>
+                            </li>
+                        @endforeach
+                    </ul>
+                    {{ $products->links() }}
+                </div>
             </div>
         </div>
     </div>

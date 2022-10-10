@@ -50,4 +50,14 @@
 // Utility
 // *************************************************************
 @import './object/utility/bgColor';
+.u-btn {
+    &__edit {
+        color: $btn-color_main;
+        border: 2px solid $btn-color_main;
+    }
+    &__remove {
+        color: #c76d6d;
+        border: 2px solid #c76d6d;
+    }
+}
 

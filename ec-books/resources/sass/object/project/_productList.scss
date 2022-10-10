@@ -12,6 +12,9 @@
         height: 150px;
         background: $bg-color;
     }
+    &__list {
+        margin-bottom: $space_3l;
+    }
     &__colName {
         display: flex;
         border-top: 3px solid $border-color;
@@ -33,10 +36,9 @@
     }
     &__btn {
         display: block;
-        color: $btn-color_main;
-        border: 2px solid $btn-color_main;
         border-radius: 5px;
         padding: $space_s $space_m;
+        margin-right: $space_s;
     }
     &__page {
         margin-top: $space_3l;

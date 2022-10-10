@@ -57,4 +57,10 @@ class ProductsController extends Controller
         $product->save();
         return redirect()->route('admin.home');
     }
+    // 商品削除
+    public function delete($id)
+    {
+        Product::find($id)->delete();
+        return redirect()->route('admin.home');
+    }
 }
