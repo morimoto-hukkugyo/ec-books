@@ -1,0 +1,49 @@
+.p-footer {
+    color: $color_base;
+    background: $color_main;
+    font-size: $font-size_m;
+    &__inner {
+        width: $site-width;
+        margin: 0 auto;
+        padding-top: $space_xl;
+        padding-bottom: $space_3l;
+        @include mq(md) {
+            width: 100%;
+            text-align: center;
+        }
+    }
+    &__top {
+        display: flex;
+        flex-wrap: wrap;
+        line-height: 2;
+        @include mq(md) {
+            display: block;
+        }
+    }
+    &__col {
+        margin: $space_l $space_3l;
+        @include mq(md) {
+            margin: $space_xxl 0;
+        }
+        @include mq(sm) {
+            margin: $space_l 0;
+        }
+    }
+    &__tit {
+        font-size: $font-size_l;
+        margin-bottom: $space_m;
+    }
+    &__company {
+        font-size: $font-size_xl;
+        font-weight: bold;
+    }
+    &__copy {
+        font-size: $font-size_s;
+        margin-top: $space_xxl;
+        margin-left: $space_3l;
+        @include mq(md) {
+            margin-top: 0;
+            margin-left: 0;
+        }
+    }
+}

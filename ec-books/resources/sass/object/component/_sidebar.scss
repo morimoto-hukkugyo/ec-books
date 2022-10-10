@@ -1,0 +1,17 @@
+.c-sidebar {
+    background: $color_base;
+    padding: $space_l;
+    max-height: 300px;
+    &__item {
+        display: block;
+        margin-bottom: $space_l;
+    }
+    &__btn {
+        width: 100%;
+        color: $color_base;
+        background: $color_main;
+        border-radius: 5px;
+        text-align: center;
+        padding: 5px;
+    }
+}

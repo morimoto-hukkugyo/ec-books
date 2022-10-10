@@ -4,11 +4,6 @@
 <section class="l-adminHome">
     <div class="c-container p-adminHome">
         <h2 class="c-container__tit">管理者ホーム画面</h2>
-        {{-- @if (session('status'))
-            <div class="alert alert-success" role="alert">
-                {{ session('status') }}
-            </div>
-        @endif --}}
         <div class="p-adminHome__body">
             <form class="c-sidebar">
                 <label class="c-sidebar__item" for="search-text">
@@ -23,41 +18,65 @@
                         <img src="" alt="" class="">
                     </div>
                     <ul class="c-menu">
-                        <li class="c-menu__item u-bgColor__add"><a href="{{ route('product.new') }}">商品追加</a></li>
+                        <li class="c-menu__item u-bgColor__add">
+                            <a class="c-menu__text" href="{{ route('product.new') }}">商品追加</a>
+                        </li>
                         <li class="c-menu__item u-bgColor__edit">編集</li>
                         <li class="c-menu__item u-bgColor__remove">削除</li>
                     </ul>
                 </div>
-                <ul class="p-productList__body">
-                    <li class="p-productList__colName">
-                        <p class="p-productList__col">
-                            商品ID
-                        </p>
-                        <p class="p-productList__col">
-                            商品名
-                        </p>
-                        <p class="p-productList__col">
-                            作家
-                        </p>
-                        <p class="p-productList__col">
-                            値段
-                        </p>
-                    </li>
-                    <li class="p-productList__item">
-                        <p class="p-productList__col">
-                            123
-                        </p>
-                        <p class="p-productList__col">
-                            
-                        </p>
-                        <p class="p-productList__col">
-                            作家
-                        </p>
-                        <p class="p-productList__col">
-                            値段
-                        </p>
-                    </li>
-                </ul>
+                <div class="p-productList__body">
+                    <ul class="p-productList__list">
+                        <li class="p-productList__colName">
+                            <p class="p-productList__col">
+                                商品ID
+                            </p>
+                            <p class="p-productList__col">
+                                商品名
+                            </p>
+                            <p class="p-productList__col">
+                                作家
+                            </p>
+                            <p class="p-productList__col">
+                                値段
+                            </p>
+                        </li>
+                        @foreach($products as $key => $val)
+                            <li class="p-productList__item">
+                                <p class="p-productList__col">
+                                    {{ $val->id }}
+                                </p>
+                                <p class="p-productList__col">
+                                    {{ $val->name }}
+                                </p>
+                                <p class="p-productList__col">
+                                    {{ $val->writer_name }}
+                                </p>
+                                <p class="p-productList__col">
+                                    {{ $val->price }}
+                                </p>
+                                <a class="p-productList__btn u-btn__edit" href="{{ route('product.edit', $val->id) }}">
+                                    編集
+                                </a>
+                                {{-- <a class="p-productList__btn u-btn__remove" href="{{ route('product.edit', $val->id) }}" 
+                                    onclick="event.preventDefault();
+                                    document.getElementById('product-remove').submit();">
+                                    削除
+                                </a>
+                                <form id="product-remove" action="{{ route('product.edit', $val->id) }}" method="POST" style="display: none;">
+                                    @method('DELETE')
+                                    @csrf
+                                </form> --}}
+                                <form action="{{ route('product.delete',$val->id) }}" method="post">
+                                    @method('DELETE')
+                                    @csrf
+                                    <button class="p-productList__btn u-btn__remove" onclick='return confirm("商品ID{{ $val->id }}を削除しますか？");'>削除</button>
+                                </form>
+                            </li>
+                        @endforeach
+                    </ul>
+                    {{ $products->links() }}
+                </div>
             </div>
         </div>
     </div>

@@ -1,0 +1,43 @@
+.p-mainHeader {
+    color: $color_base;
+    height: 100%;
+    background: $color_main;
+    z-index: 2;
+    @include mq(md) {
+        font-size: $font-size_xl;
+        text-align: center;
+    }
+    &__inner {
+        width: 90%;
+        height: 100%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-weight: bold;
+    }
+    &__tit {
+        font-size: $font-size_xl;
+        @include mq() {
+            font-size: $font-size_l;
+        }
+    }
+    &__btn {
+        padding: $space_m $space_l;
+        transition: all .3s;
+        @include mq() {
+            padding: $space_m;
+        }
+        &:hover {
+            color: $btn-color_main;
+        }
+    }
+    &__register {
+        @extend .p-mainHeader__btn;
+        border-radius: 5px;
+        border: 1px solid $btn-color_main;
+        &:hover {
+            background: $color_base;
+        }
+    }
+}

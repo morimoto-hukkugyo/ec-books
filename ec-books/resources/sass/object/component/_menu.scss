@@ -1,0 +1,14 @@
+.c-menu {
+    display: flex;
+    align-items: flex-end;
+    &__item {
+        max-height: 50px;
+        color: $color_base;
+        margin-right: $space_m;
+        border-radius: 5px;
+    }
+    &__text {
+        display: inline-block;
+        padding: $space_m $space_s;
+    }
+}

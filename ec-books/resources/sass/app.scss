@@ -13,3 +13,51 @@
 //top
 @import './top.scss';
 
+// *************************************************************
+// Foundation
+// *************************************************************
+@import './foundation/mixin';
+@import './foundation/variables';
+@import './foundation/reset';
+@import './foundation/base';
+
+// *************************************************************
+// Layout
+// *************************************************************
+@import './layout/adminHome';
+@import './layout/header';
+@import './layout/adminForm';
+
+// *************************************************************
+// Componet
+// *************************************************************
+@import './object/component/container';
+@import './object/component/menu';
+@import './object/component/menuTrigger';
+@import './object/component/sidebar';
+@import './object/component/form';
+@import './object/component/page';
+
+// *************************************************************
+// Project
+// *************************************************************
+@import './object/project/mainHeader';
+@import './object/project/adminHome';
+@import './object/project/productList';
+@import './object/project/footer';
+
+// *************************************************************
+// Utility
+// *************************************************************
+@import './object/utility/bgColor';
+.u-btn {
+    &__edit {
+        color: $btn-color_main;
+        border: 2px solid $btn-color_main;
+    }
+    &__remove {
+        color: #c76d6d;
+        border: 2px solid #c76d6d;
+    }
+}
+

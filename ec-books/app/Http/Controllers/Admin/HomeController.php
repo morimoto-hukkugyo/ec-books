@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;  // Adminを追加
  
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Product;
  
 class HomeController extends Controller
 {
@@ -24,6 +25,8 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('admin.home');  //変更
+        // 商品を10件取得
+        $products = Product::getItemList();
+        return view('admin.home', compact('products'));
     }
 }

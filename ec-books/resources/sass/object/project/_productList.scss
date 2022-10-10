@@ -1,0 +1,46 @@
+// 商品一覧
+.p-productList {
+    width: 100%;
+    padding: 0 $space_3l;
+    &__head {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: $space_3l;
+    }
+    &__img {
+        width: 200px;
+        height: 150px;
+        background: $bg-color;
+    }
+    &__list {
+        margin-bottom: $space_3l;
+    }
+    &__colName {
+        display: flex;
+        border-top: 3px solid $border-color;
+        border-bottom: 3px solid $border-color;
+        padding: $space_m $space_l;
+    }
+    &__col {
+        width: 200px;
+        padding-left: $space_xl;
+        &--l {
+            width: 300px;
+        }
+    }
+    &__item {
+        padding: $space_m $space_l;
+        display: flex;
+        align-items: center;
+        border-bottom: 1px solid $border-color;
+    }
+    &__btn {
+        display: block;
+        border-radius: 5px;
+        padding: $space_s $space_m;
+        margin-right: $space_s;
+    }
+    &__page {
+        margin-top: $space_3l;
+    }
+}

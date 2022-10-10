@@ -57,4 +57,7 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth:admin'], function() {
     Route::get('home',      'Admin\HomeController@index')->name('admin.home');
     Route::get('product/new', 'ProductsController@new')->name('product.new');
     Route::post('product/new', 'ProductsController@create')->name('product.create');
+    Route::get('product/{id}/edit', 'ProductsController@edit')->name('product.edit');
+    Route::patch('product/{id}/edit', 'ProductsController@update')->name('product.update');
+    Route::delete('product/{id}/edit', 'ProductsController@delete')->name('product.delete');
 });
