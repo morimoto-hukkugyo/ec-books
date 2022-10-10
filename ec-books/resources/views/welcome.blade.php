@@ -15,36 +15,39 @@
                 </div>
             </div>
         </div>
-        <div class="col-10">
+        <div class="col-9">
             {{-- 新着 --}}
             <div class="topics">
                 <div class="event_fream">
                     <h3>新着商品</h3>
                     <img src="{{ asset('img/title_border.jpg') }}">
-                    @foreach ($products as $product)
-                    <div class="event_box_l">
-                        <a href="{{ route('user.show',['id'=>$product->id]) }}">
-                            {{-- 写真 --}}
-                            <img src="{{ Storage::url($product->image) }}" height="140px" width="215px">
-                        </a>
-                        <a href="https://www.amazon.co.jp/%E5%A4%9C%E8%A1%8C-%E6%A3%AE%E8%A6%8B-%E7%99%BB%E7%BE%8E%E5%BD%A6/dp/409386456X" class="event_box_link">
-                            <div class="event_box">
-                                <img src="{{ asset('img/icon_item.jpg') }}">
-                                <div class="txt_sub">
-                                    {{-- 商品名 --}}
-                                    {{ $product->name }}
-                                    <br>
+                    <div class="aaa">
+                        @foreach ($products as $product)
+                        <div class="event_box_l">
+                            <a href="{{ route('user.show',['id'=>$product->id]) }}">
+                                {{-- 写真 --}}
+                                <img src="{{ Storage::url($product->image) }}" height="140px" width="215px">
+                            </a>
+                            <a href="https://www.amazon.co.jp/%E5%A4%9C%E8%A1%8C-%E6%A3%AE%E8%A6%8B-%E7%99%BB%E7%BE%8E%E5%BD%A6/dp/409386456X" class="event_box_link">
+                                <div class="event_box">
+                                    <img src="{{ asset('img/icon_item.jpg') }}">
+                                    <div class="txt_sub">
+                                        {{-- 商品名 --}}
+                                        {{ $product->name }}
+                                        <br>
+                                    </div>
+                                    <div class="text_main">
+                                        {{-- 作家名 --}}
+                                        <p>作者: {{ $product->writer_name}}</p>
+                                        {{-- 商品値段 --}}
+                                        <p>値段: {{ $product->price}}</p>
+                                    </div>
                                 </div>
-                                <div class="text_main">
-                                    {{-- 作家名 --}}
-                                    <p>作者: {{ $product->writer_name}}</p>
-                                    {{-- 商品値段 --}}
-                                    <p>値段: {{ $product->price}}</p>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
+                            </a>
+                        </div>
                     @endforeach
+                    </div>
+                    
                 </div>
             </div>
             {{-- event end --}}
@@ -69,7 +72,7 @@
             </div>
             {{-- オススメの本終了 --}}
         </div>
-        <div class="col-2">
+        <div class="col-3">
             <a class="twitter-timeline" data-width="400" data-height="1000" href="https://twitter.com/offwhiteDITA?ref_src=twsrc%5Etfw">Tweets by offwhiteDITA</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
         </div>
     </div>  
