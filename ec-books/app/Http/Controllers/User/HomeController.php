@@ -5,6 +5,7 @@ namespace App\Http\Controllers\User;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Product;
+use App\user;
 use Illuminate\Support\Facades\DB;
 
 class HomeController extends Controller
@@ -25,10 +26,24 @@ class HomeController extends Controller
         return view('user.index',compact('products'));
     }
 
+    public function home()
+    {
+        $users = User::get();
+
+        return view('user.home',compact('users'));
+    }
+
     public function show($id)
     {
         $product = Product::find($id);
 
         return view('User.show',compact('product'));
+    }
+
+    public function edit($id)
+    {
+        $product = Product::find($id);
+
+        return view('User.edit',compact('product'));
     }
 }
