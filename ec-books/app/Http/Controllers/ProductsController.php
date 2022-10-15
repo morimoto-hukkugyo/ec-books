@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Product;
+use App\P_category;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 
@@ -11,7 +12,8 @@ class ProductsController extends Controller
     // 商品作成画面表示
     public function new()
     {
-        return view('products.new');
+        $categories = P_category::all();
+        return view('products.new', compact('categories'));
     }
     // 商品作成
     public function create(Request $request)
@@ -35,7 +37,8 @@ class ProductsController extends Controller
     public function edit($id)
     {
         $product = Product::find($id);
-        return view('products.edit', compact('product'));
+        $categories = P_category::all();
+        return view('products.edit', compact('product', 'categories'));
     }
     // 商品情報を更新
     public function update(Request $request, $id)
