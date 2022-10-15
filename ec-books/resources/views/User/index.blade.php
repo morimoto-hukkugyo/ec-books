@@ -16,7 +16,7 @@
                         </div>        
                     </div>
                     <div class="book-index">
-                        <div class="col-7">
+                        <div class="col-8">
                             <div class="book-title">
                                 {{ $product->name}}
                             </div>
