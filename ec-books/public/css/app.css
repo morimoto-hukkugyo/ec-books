@@ -9447,6 +9447,14 @@ h3 {
   display: flex;
 }
 
+.edit {
+  text-align: right;
+}
+
+.table table-borderless {
+  padding-top: 20px;
+}
+
 /*! destyle.css v3.0.0 | MIT License | https://github.com/nicolas-cusan/destyle.css */
 /* Reset box-model and set borders */
 /* ============================================ */
