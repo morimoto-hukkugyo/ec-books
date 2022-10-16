@@ -35,7 +35,7 @@ class HomeController extends Controller
 
     public function show($id)
     {
-        $product = Product::find($id);
+        $product = Product::getItem($id);
 
         return view('User.show',compact('product'));
     }

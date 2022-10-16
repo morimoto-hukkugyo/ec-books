@@ -12,10 +12,13 @@
             {{-- 商品詳細 --}}
             <div class="book-title-block">
                 <div class="book-title">
-                    {{ $product->name}}
+                    {{ $product->product_name}}
                 </div>
                 <div class="writer_name">
                     著者: {{ $product->writer_name }}
+                </div>
+                <div class="categoriy">
+                    カテゴリー:{{ $product->name}}
                 </div>
                 <div class="writer_price">
                     値段: {{ $product->price}}円
