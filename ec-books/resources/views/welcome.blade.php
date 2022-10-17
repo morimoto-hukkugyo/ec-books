@@ -26,9 +26,9 @@
                         <div class="event_box_l">
                             <a href="{{ route('user.show',['id'=>$product->id]) }}">
                                 {{-- 写真 --}}
-                                <img src="{{ Storage::url($product->image) }}" height="140px" width="215px">
+                                <img src="{{ asset($product->image) }}" height="180px" width="250px" alt="">
                             </a>
-                            <a href="https://www.amazon.co.jp/%E5%A4%9C%E8%A1%8C-%E6%A3%AE%E8%A6%8B-%E7%99%BB%E7%BE%8E%E5%BD%A6/dp/409386456X" class="event_box_link">
+                            <a href="{{ route('user.show',['id'=>$product->id]) }}" class="event_box_link">
                                 <div class="event_box">
                                     <img src="{{ asset('img/icon_item.jpg') }}">
                                     <div class="txt_sub">
@@ -47,7 +47,6 @@
                         </div>
                     @endforeach
                     </div>
-                    
                 </div>
             </div>
             {{-- event end --}}
@@ -59,8 +58,8 @@
                 <ul>
                     @foreach ($osususme as $os)
                         <li class="first_child">
-                            <a href="https://www.amazon.co.jp/%E3%81%8B%E3%81%8C%E3%81%BF%E3%81%AE%E5%AD%A4%E5%9F%8E-%E8%BE%BB%E6%9D%91-%E6%B7%B1%E6%9C%88/dp/4591153320" target="_blank">
-                                <img src="{{ Storage::url($os->image) }}">
+                            <a href="{{ route('user.show',['id'=>$os->id]) }}" target="_blank">
+                                <img src="{{ asset($os->image) }}" alt="">
                                 <span class="books_title">{{ $os->name }}</span>
                                 <span class="books_writer">{{ $os->writer_name }}</span>
                                 <span class="books_price">税込価格: {{ $os->price }}円</span>
@@ -73,7 +72,9 @@
             {{-- オススメの本終了 --}}
         </div>
         <div class="col-3">
-            <a class="twitter-timeline" data-width="400" data-height="1000" href="https://twitter.com/offwhiteDITA?ref_src=twsrc%5Etfw">Tweets by offwhiteDITA</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+            <div class="twitter">
+                <a class="twitter-timeline" data-width="400" data-height="1000" href="https://twitter.com/offwhiteDITA?ref_src=twsrc%5Etfw">Tweets by offwhiteDITA</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+            </div>
         </div>
     </div>  
 </div>    

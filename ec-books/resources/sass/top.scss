@@ -16,15 +16,15 @@
 }
 
 .event_box_l {
-    width: 215px;
+    width: 250px;
     // float: left;
     display: block;
     margin: 0 15px 18px 0;
 }
 
-// .event_box_l:last-child {
-//     margin: 0px
-// }
+.event_box_l:nth-child(3n) {
+    margin: 0 0 18px 0;
+}
 
 a.event_box_link, a:hover.event_box_link {
     text-decoration: none;
@@ -58,6 +58,9 @@ a.event_box_link, a:hover.event_box_link {
     clear: both;
 }
 
+.twitter {
+    padding-top: 50px;
+}
 
 .book_list {
     clear: both;

@@ -54,7 +54,6 @@
                         <li class="nav-item">
                             <a class="nav-link" href="{{ route('user.home') }}">マイページ</a>
                         </li>
-
                         <!-- Authentication Links -->
                         @guest
                             <li class="nav-item">
