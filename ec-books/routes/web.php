@@ -33,6 +33,8 @@ Route::group(['middleware' => ['auth']], function() {
     Route::get('index', 'User\HomeController@index')->name('user.index');
     Route::get('show{id}', 'User\HomeController@show')->name('user.show');
     Route::get('edit{id}', 'User\HomeController@edit')->name('user.edit');
+    Route::post('update{id}','User\HomeController@update')->name('user.update');
+    Route::get('serch', 'User\HomeController@serch')->name('serch');
     Route::get('home', 'User\HomeController@home')->name('user.home');
 });
  
