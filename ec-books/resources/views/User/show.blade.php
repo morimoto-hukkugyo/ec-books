@@ -5,7 +5,7 @@
         <div class="col-3">
             {{-- 詳細写真表示 --}}
             <div class="book_image">
-                <img src="{{ Storage::url($product->image) }}" height="435px"> 
+                <img src="{{ asset($product->image) }}" height="435px" alt="">
             </div>        
         </div>
         <div class="col-7">

@@ -1,10 +1,22 @@
 @extends('layouts.app')
 @section('content')
 <div class="conteiner">
+    <div class="row justify-content-end">
+        <div class="col-5">
+            <form action="{{ url('serch')}}" method="post">
+                {{ csrf_field()}}
+                {{method_field('get')}}
+                <div class="form-group">
+                    <input type="text" class="form-control col-md-5" placeholder="作品名を入力してください" name="name">
+                    <input type="text" class="form-control col-md-5" placeholder="作者を入力してください" name="writer_name">
+                </div> 
+                <div class="submit">
+                    <input type="submit" class="btn btn-primary col-md-5" value="検索">
+                </div>
+            </form>  
+        </div>
+    </div>
     <div class="row">
-        {{-- <div class="sidebar">
-            <h1>サイドバー</h1>
-        </div> --}}
         @foreach ($products as $product)
             {{-- <div class="user-index"> --}}
                 <a href="{{ route('user.show',['id'=>$product->id]) }}">
@@ -12,7 +24,7 @@
                     <div class="col-2">
                         {{-- 詳細写真表示 --}}
                         <div class="book_image">
-                            <img src="{{ Storage::url($product->image) }}" height="200px"> 
+                            <img src="{{ asset($product->image) }}" height="200px" alt="">
                         </div>        
                     </div>
                     <div class="book-index">
@@ -41,5 +53,6 @@
             {{-- </div> --}}
         @endforeach
     </div>
+    
 </div>
 @endsection
