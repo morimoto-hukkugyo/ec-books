@@ -31,9 +31,10 @@
         </div>
     </label>
     <label for="image" class="c-form__label">
-        画像
-        <img class="c-form__image" src="{{ asset($product->image) }}" alt="">
-        {{ $product->image }}
+        <p>画像</p>
+        @if (!empty($product->image))
+            <img class="c-form__image" src="{{ asset($product->image) }}" alt="">
+        @endif
         <input type="file" name="image" id="image">
     </label>
     <label for="introduction" class="c-form__label">

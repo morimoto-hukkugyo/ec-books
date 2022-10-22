@@ -2,9 +2,9 @@
  
 namespace App\Http\Controllers\Admin;  // Adminを追加
  
+use App\Product;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use App\Product;
  
 class HomeController extends Controller
 {
@@ -23,10 +23,12 @@ class HomeController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
+        $keyword = $request->keyword;
+        $search_id = $request->search_id;
         // 商品を10件取得
-        $products = Product::getItemList();
-        return view('admin.home', compact('products'));
+        $products = Product::getItemList($keyword, $search_id);
+        return view('admin.home', compact('products', 'keyword', 'search_id'));
     }
 }

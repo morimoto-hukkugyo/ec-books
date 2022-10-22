@@ -19,8 +19,14 @@ class Product extends Model
      * メソッド
      */
     // 商品一覧を取得
-    public static function getItemList()
+    public static function getItemList($keyword, $search_id)
     {
-        return Product::paginate(10);
+        return Product::when( $keyword, function($query) use ($keyword) {
+                                return $query->where('name', 'like', "%$keyword%");
+                            })
+                            ->when( $search_id, function($query) use ($search_id) {
+                                return $query->where('id', 'like', "%$search_id%");
+                            })
+                            ->paginate(10);
     }
 }
