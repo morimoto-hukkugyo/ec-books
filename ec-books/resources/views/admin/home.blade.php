@@ -5,12 +5,17 @@
     <div class="c-container p-adminHome">
         <h2 class="c-container__tit">管理者ホーム画面</h2>
         <div class="p-adminHome__body">
-            <form class="c-sidebar">
-                <label class="c-sidebar__item" for="search-text">
+            <form action="{{ route('admin.home') }}" class="c-sidebar" method="GET">
+                @csrf
+                <label class="c-sidebar__item" for="search_text">
                     <p>フリーワード</p>
-                    <input id="search-text" type="text" class="c-form__input">
+                    <input id="search_text" name="keyword" type="text" class="c-form__input" value="{{ $keyword }}">
                 </label>
-                <button type="submit">検索</button>
+                <label class="c-sidebar__item" for="search_id">
+                    <p>商品ID</p>
+                    <input id="search_id" name="search_id" type="text" class="c-form__input" value="{{ $search_id }}">
+                </label>
+                <button class="c-sidebar__btn" type="submit">検索</button>
             </form>
             <div class="p-productList">
                 <div class="p-productList__head">
@@ -58,15 +63,6 @@
                                 <a class="p-productList__btn u-btn__edit" href="{{ route('product.edit', $val->id) }}">
                                     編集
                                 </a>
-                                {{-- <a class="p-productList__btn u-btn__remove" href="{{ route('product.edit', $val->id) }}" 
-                                    onclick="event.preventDefault();
-                                    document.getElementById('product-remove').submit();">
-                                    削除
-                                </a>
-                                <form id="product-remove" action="{{ route('product.edit', $val->id) }}" method="POST" style="display: none;">
-                                    @method('DELETE')
-                                    @csrf
-                                </form> --}}
                                 <form action="{{ route('product.delete',$val->id) }}" method="post">
                                     @method('DELETE')
                                     @csrf
@@ -75,7 +71,7 @@
                             </li>
                         @endforeach
                     </ul>
-                    {{ $products->links() }}
+                    {{ $products->appends(request()->query())->links() }}
                 </div>
             </div>
         </div>
